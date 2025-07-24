@@ -109,7 +109,7 @@
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Lower";
+            display-name = "Numb";
             bindings = <
 &kp GRAVE  &kp N1           &kp N2       &kp N3                &kp N4                    &kp N5             &kp N6            &kp N7                       &kp N8                    &kp N9                &kp N0                 &kp BSPC
 &kp TAB    &kp EXCLAMATION  &kp AT_SIGN  &mt RIGHT_SHIFT HASH  &mt RIGHT_CONTROL DOLLAR  &kp PERCENT        &kp CARET         &mt RIGHT_CONTROL AMPERSAND  &mt ASTERISK RIGHT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
@@ -125,7 +125,7 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "Nav";
             bindings = <
 &kp ESCAPE  &none       &none      &none             &none         &none              &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP     &kp LC(RIGHT_ARROW)  &kp LC(BACKSPACE)  &kp BSPC
 &none       &trans      &trans     &trans            &trans        &kp PRINTSCREEN    &kp PAGE_DOWN  &kp LEFT_ARROW      &kp DOWN   &kp RIGHT_ARROW      &kp LC(DELETE)     &kp DELETE
@@ -134,31 +134,37 @@
             >;
         };
 
-        layer_6 {
+        FFF {
             bindings = <
 &kp ESC  &kp F1  &kp F2  &kp F3           &kp F4          &kp F5    &kp F6         &kp F7  &kp F8  &kp F9  &tmux_past  &kp F11
 &trans   &trans  &trans  &trans           &trans          &trans    &trans         &trans  &trans  &trans  &trans      &kp F12
 &trans   &trans  &trans  &copy_mode_tmux  &tmux_vertical  &trans    &tmux_new_tab  &trans  &trans  &trans  &trans      &trans
                          &trans           &trans          &trans    &trans         &trans  &trans
             >;
+
+            label = "F_tmux";
         };
 
-        layer_4 {
+        BT {
             bindings = <
 &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &out OUT_USB    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans      &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans      &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans      &trans          &trans  &trans  &trans
             >;
+
+            label = "BT_conf";
         };
 
-        layer_5 {
+        Mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &trans  &trans
                         &trans  &trans  &trans    &trans          &trans          &trans
             >;
+
+            label = "Mouse";
         };
     };
 };
