@@ -33,7 +33,51 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TMUX_PAST_F10";
             #binding-cells = <0>;
-            bindings = <&kp F10>;
+            bindings = <&kp F10>, <&tmux_past>;
+        };
+    };
+
+    macros {
+        tab_left: tab_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>;
+            label = "TAB_LEFT";
+        };
+
+        tab_right: tab_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "TAB_RIGHT";
+        };
+
+        copy_mode_tmux: copy_mode_tmux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LEFT_BRACKET>;
+            label = "COPY_MODE_TMUX";
+        };
+
+        tmux_new_tab: tmux_new_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp C>;
+            label = "TMUX_NEW_TAB";
+        };
+
+        tmux_vertical: tmux_vertical {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp PERCENT>;
+            label = "TMUX_VERTICAL";
+        };
+
+        tmux_past: tmux_past {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp RIGHT_BRACKET>;
+            label = "TMUX_PAST";
         };
     };
 
@@ -49,10 +93,10 @@
 
             display-name = "Base";
             bindings = <
-&lt 5 TAB  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&lt 5 TAB   &esc_q      &kp W            &kp E              &kp R                &kp T        &kp Y    &kp U                &kp I              &kp O           &kp P              &kp BSPC
+&lt 4 CAPS  &mt LGUI A  &mt RIGHT_ALT S  &mt RIGHT_SHIFT D  &mt RIGHT_CONTROL F  &kp G        &kp H    &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_GUI SEMI  &kp SQT
+&kp LSHFT   &kp Z       &kp X            &kp C              &kp V                &kp B        &kp N    &kp M                &kp COMMA          &kp DOT         &kp FSLH           &kp RIGHT_SHIFT
+                                         &kp LGUI           &mo 1                &kp SPACE    &kp RET  &lt 2 BACKSPACE      &lt 3 DELETE
             >;
         };
 
