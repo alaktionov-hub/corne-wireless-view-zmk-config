@@ -37,6 +37,13 @@
             #binding-cells = <0>;
             bindings = <&kp F10>, <&tmux_past>;
         };
+
+        pipe: pipe {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp BACKSLASH>;
+        };
     };
 
     macros {
