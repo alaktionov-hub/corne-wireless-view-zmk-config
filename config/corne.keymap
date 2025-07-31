@@ -145,9 +145,9 @@
 
         FFF {
             bindings = <
-&kp ESC  &kp F1  &kp F2  &kp F3           &kp F4          &kp F5    &kp F6         &kp F7  &kp F8  &kp F9  &tmux_past  &kp F11
-&trans   &trans  &trans  &trans           &trans          &trans    &trans         &trans  &trans  &trans  &trans      &kp F12
-&trans   &trans  &trans  &copy_mode_tmux  &tmux_vertical  &trans    &tmux_new_tab  &trans  &trans  &trans  &trans      &trans
+&kp ESC  &kp F1  &kp F2  &kp F3           &kp F4          &kp F5    &kp F6         &kp F7  &kp F8  &kp F9  &tmux_past_f10  &kp F11
+&trans   &trans  &trans  &trans           &trans          &trans    &trans         &trans  &trans  &trans  &trans          &kp F12
+&trans   &trans  &trans  &copy_mode_tmux  &tmux_vertical  &trans    &tmux_new_tab  &trans  &trans  &trans  &trans          &trans
                          &trans           &trans          &trans    &trans         &trans  &trans
             >;
 
