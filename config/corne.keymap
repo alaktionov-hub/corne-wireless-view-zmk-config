@@ -90,6 +90,13 @@
             bindings = <&kp LC(B) &kp RIGHT_BRACKET>;
             label = "TMUX_PAST";
         };
+
+        tmux_horizontal: tmux_horizontal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp DOUBLE_QUOTES>;
+            label = "TMUX_HORIZONTAL";
+        };
     };
 
     keymap {
@@ -145,10 +152,10 @@
 
         FFF {
             bindings = <
-&kp ESC  &kp F1  &kp F2  &kp F3           &kp F4          &kp F5    &kp F6         &kp F7  &kp F8  &kp F9  &tmux_past_f10  &kp F11
-&trans   &trans  &trans  &trans           &trans          &trans    &trans         &trans  &trans  &trans  &trans          &kp F12
-&trans   &trans  &trans  &copy_mode_tmux  &tmux_vertical  &trans    &tmux_new_tab  &trans  &trans  &trans  &trans          &trans
-                         &trans           &trans          &trans    &trans         &trans  &trans
+&kp ESC  &kp F1  &kp F2  &kp F3           &kp F4          &kp F5    &kp F6            &kp F7  &kp F8  &kp F9  &tmux_past_f10  &kp F11
+&trans   &trans  &trans  &trans           &trans          &trans    &tmux_horizontal  &trans  &trans  &trans  &trans          &kp F12
+&trans   &trans  &trans  &copy_mode_tmux  &tmux_vertical  &trans    &tmux_new_tab     &trans  &trans  &trans  &trans          &trans
+                         &trans           &trans          &trans    &trans            &trans  &trans
             >;
 
             label = "F_tmux";
